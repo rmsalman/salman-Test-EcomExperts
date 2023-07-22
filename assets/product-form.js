@@ -40,6 +40,19 @@ if (!customElements.get('product-form')) {
         }
         config.body = formData;
 
+        if(formData.get('id') == '45541030101283'){
+          fetch(window.Shopify.routes.root + 'cart/update.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({'updates': {45541030101283:1, 45521540350243:1 }})
+          })
+          .then(response => {
+            return response.json();
+          })
+        }
+
         fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
