@@ -226,7 +226,7 @@ if (!customElements.get('cart-note')) {
 }
 
 
-if(document.querySelector('[aria-label*="Remove Handbag"]')) {
+if(document.querySelector('[aria-label*="Remove Handbag"]') && document.querySelector('[aria-label*="Remove Soft Winter Jacket"]')) {
   document.querySelector('[aria-label*="Remove Handbag"]').onclick = function(){ 
     setTimeout(function(){   
         if(document.querySelector('[aria-label*="Remove Soft Winter Jacket"]')){document.querySelector('[aria-label*="Remove Soft Winter Jacket"]').click();}
