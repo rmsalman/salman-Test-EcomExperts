@@ -46,7 +46,7 @@ if (!customElements.get('product-form')) {
             headers: {
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify({'updates': {45541030101283:1, 45547417731363:1 }})
+            body: JSON.stringify({'updates': {45547417731363:1 }})
           })
           .then(response => {
             return response.json();
