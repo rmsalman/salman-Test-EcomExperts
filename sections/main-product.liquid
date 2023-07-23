@@ -2076,3 +2076,6 @@
   ]
 }
 {% endschema %}
+
+{{ 'swatches.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swatches.js' | asset_url }}" defer="defer"></script>

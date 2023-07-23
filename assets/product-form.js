@@ -40,7 +40,21 @@ if (!customElements.get('product-form')) {
         }
         config.body = formData;
 
-        fetch(`${routes.cart_add_url}`, config)
+        if(formData.get('id') == '45541030101283'){
+          fetch(window.Shopify.routes.root + 'cart/update.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({'updates': {45547417731363:1 }})
+          })
+          .then(response => {
+            return response.json();
+          })
+        }
+
+        setTimeout(() => {
+          fetch(`${routes.cart_add_url}`, config)
           .then((response) => response.json())
           .then((response) => {
             if (response.status) {
@@ -91,7 +105,10 @@ if (!customElements.get('product-form')) {
             if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');
             if (!this.error) this.submitButton.removeAttribute('aria-disabled');
             this.querySelector('.loading-overlay__spinner').classList.add('hidden');
-          });
+          });          
+        }, 1000);
+
+
       }
 
       handleErrorMessage(errorMessage = false) {

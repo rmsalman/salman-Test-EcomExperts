@@ -1,0 +1,45 @@
+[for="Option-template--20016180887843__main-0"]+.select {
+    display: none;
+}
+
+.swatches .swatchesLabel {
+    color: transparent !important;
+}
+
+.swatchesLabel:after {
+    background: black !important;
+    content: "";
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    top: 3px;
+    border-radius: 40px;
+}
+
+.swatchesLabel {
+    overflow: hidden;
+}
+
+.swatchesLabel--Red:after {
+    background: red !important;
+}
+
+.swatchesLabel--Red {
+    border-color: red !important;
+}
+
+.swatchesLabel--Tan:after {
+    background: tan !important;
+}
+
+.swatchesLabel--Tan {
+    border-color: tan !important;
+}
+
+.product-form__input input[type=radio]:checked+label.swatchesLabel--Red {
+    background:red
+}
+.product-form__input input[type=radio]:checked+label.swatchesLabel--Tan {
+    background:tan
+}

@@ -224,3 +224,18 @@ if (!customElements.get('cart-note')) {
     }
   );
 }
+
+
+if(document.querySelector('[aria-label*="Remove Handbag"]') && document.querySelector('[aria-label*="Remove Soft Winter Jacket"]')) {
+  document.querySelector('[aria-label*="Remove Handbag"]').onclick = function(){ 
+    setTimeout(function(){   
+        if(document.querySelector('[aria-label*="Remove Soft Winter Jacket"]')){document.querySelector('[aria-label*="Remove Soft Winter Jacket"]').click();}
+    }, 2500);
+  }
+
+  document.querySelector('[aria-label*="Remove Soft Winter Jacket"]').onclick = function(){ 
+    setTimeout(function(){   
+        if(document.querySelector('[aria-label*="Remove Handbag"]')){document.querySelector('[aria-label*="Remove Handbag"]').click();}
+    }, 2500);
+  }
+}
