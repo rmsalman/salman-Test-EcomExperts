@@ -8,7 +8,7 @@ if(location.pathname == "/products/handbag"){
         document.getElementById(colorV).value = e; 
     }
     // add new html for swatch
-    var swatchHtml = `<div class="swatches"> <input selected id="swatchBlack" type="radio" name="swatch" value="Black" class="swatchesRadio"><label for="swatchBlack" class="swatchesLabel swatchesLabel--Black" onclick="updateColor('Black')">Black</label> 
+    var swatchHtml = `<div class="swatches"> <input checked id="swatchBlack" type="radio" name="swatch" value="Black" class="swatchesRadio"><label for="swatchBlack" class="swatchesLabel swatchesLabel--Black" onclick="updateColor('Black')">Black</label> 
     <input id="swatchRed" type="radio" name="swatch" value="Red" class="swatchesRadio"><label for="swatchRed" class="swatchesLabel swatchesLabel--Red" onclick="updateColor('Red')">Red</label> 
     <input id="swatchTan" type="radio" name="swatch" value="Tan" class="swatchesRadio"><label for="swatchTan" class="swatchesLabel swatchesLabel--Tan" onclick="updateColor('Tan')">Tan</label> </div>`;
     document.querySelector('[for='+colorV+']').innerHTML += swatchHtml;
