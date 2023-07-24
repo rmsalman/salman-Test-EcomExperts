@@ -16,7 +16,9 @@ if(location.pathname == "/products/handbag"){
     document.querySelector('#swatchBlack').click()
     // swatches JS ended
 
-    window.location.search = '?variant=45541015748899';
+    if(location.search !== '?variant=45541015748899') {
+        window.location.search = '?variant=45541015748899';
+    }
 
     // declared size and add to cart button
     // var sizer = 'Option-template--20016180887843__main-1';
